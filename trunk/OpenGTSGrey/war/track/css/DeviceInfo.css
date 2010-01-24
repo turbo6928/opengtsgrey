@@ -1,0 +1,49 @@
+
+TR.deviceCommandList { 
+    /* margin-top: 5px; */
+    padding-top: 5px;
+}
+
+LABEL.deviceCommandlabel { 
+    padding-left: 5px;
+}
+
+TR.deviceCommandSep { 
+    height: 25px;
+    /* margin-top: 5px; */
+    padding-top: 5px;
+    border-top: solid 1px black;
+    /* border-bottom: solid 1px black; */
+}
+TD.deviceCommandSep { 
+    height: 25px;
+    /* margin-top: 5px; */
+    padding-top: 5px;
+    border-top: solid 1px black;
+    /* border-bottom: solid 1px black; */
+}
+
+TR.deviceCommand { 
+    height: 25px;
+}
+TD.deviceCommand { 
+    height: 25px;
+}
+
+TR.deviceCommandArg {
+    height: 25px;
+    /* border-top: solid 1px black; */
+    /* border-bottom: solid 1px black; */
+}
+TD.deviceCommandArg {
+    height: 25px;
+    /* border-top: solid 1px black; */
+    /* border-bottom: solid 1px black; */
+}
+
+TR.deviceCommandSpacer { 
+    height: 5px;
+}
+TD.deviceCommandSpacer { 
+    height: 5px;
+}
