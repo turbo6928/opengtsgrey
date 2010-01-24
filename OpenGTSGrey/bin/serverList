@@ -1,0 +1,17 @@
+# -----------------------------------------------------------------------------
+# Project: OpenGTS - Open GPS Tracking System
+# URL    : http://www.opengts.org
+# File   : serverList
+# -----------------------------------------------------------------------------
+# This file is sourced by the script 'startServers.sh', and should contain startup
+# commands in the following format:
+#    execServer "Server Description" "server"  "${option}"  "-option=someOptionHere" 
+# -----------------------------------------------------------------------------
+
+# ---
+execServer "GTS OpenDMTP"               "gtsdmtp"   "${option}"  ""
+# ---
+#execServer "Example 'template' Server" "template"  "${option}"  ""
+#execServer "I-Care G3300 Server"       "icare"     "${option}"  ""
+# ---
+# -----------------------------------------------------------------------------

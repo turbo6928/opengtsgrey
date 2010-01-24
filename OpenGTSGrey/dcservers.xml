@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no' ?>
+<!DOCTYPE ReportDefinition SYSTEM "dcservers.dtd" >
+
+<!-- 
+  =======================================================================================
+  Project: OpenGTS - Open GPS Tracking System
+  URL    : http://www.opengts.org
+  File   : dcservers.xml
+  =======================================================================================
+  Change History:
+   2009/09/23  Martin D. Flynn
+      - Initial Release
+  =======================================================================================
+-->
+
+<!-- ================================================================================ -->
+<DCServerConfig
+    bindAddress=""
+    backlog=""
+    portOffset="0"
+    >
+    <!-- ================================================================================
+     === Standard properties:
+     ===    uniqueIdPrefix          - [String]
+     ===    commandProtocol         - [tcp|udp|sms]
+     ===    ackResponsePort         - [int]
+     ===    clientCommandPort       - [int]
+     ===    clientCommandPort.udp   - [int]
+     ===    clientCommandPort.tcp   - [int]
+     ===    tcpIdleTimeoutMS        - [long]
+     ===    tcpPacketTimeoutMS      - [long]
+     ===    tcpSessionTimeoutMS     - [long]
+     ===    udpIdleTimeoutMS        - [long]
+     ===    udpPacketTimeoutMS      - [long]
+     ===    udpSessionTimeoutMS     - [long]
+     ===    minimumSpeedKPH         - [double]
+     ===    estimateOdometer        - [boolean]
+     ===    simulateGeozones        - [boolean]
+     ===    simulateDigitalInputs   - [boolean]
+     ===    minimumMovedMeters      - [double]
+     ===    saveRawDataPackets      - [boolean]
+     ===    startStopSupported      - [boolean]
+     ===    statusLocationInMotion  - [boolean] Translate Location to InMotion
+     -->
+
+    <!-- ================================================================================ -->
+    <DCServer name="template">
+        <Description><![CDATA[
+            Example Template Server
+            ]]></Description>
+        <UniqueIDPrefix><![CDATA[
+            template_
+            imei_
+            *
+            ]]></UniqueIDPrefix>
+        <ListenPorts 
+            tcpPort="31200" 
+            udpPort="31200"
+            />
+        <Properties>
+            <Property key="parseFormat">3</Property>
+            <Property key="minimumSpeedKPH">4.0</Property>
+            <Property key="estimateOdometer">true</Property>
+            <Property key="simulateGeozones">true</Property>
+            <Property key="simulateDigitalInputs">0xFF</Property>
+        </Properties>
+    </DCServer>
+
+    <!-- ================================================================================ -->
+    <DCServer name="gtsdmtp">
+        <Description><![CDATA[
+            OpenDMTP
+            ]]></Description>
+        <ListenPorts 
+            tcpPort="31000" 
+            udpPort="31000"
+            />
+        <Properties>
+            <Property key="simulateGeozones">false</Property>
+            <Property key="customEvent.55">H|1|0|2 H|2|0|4 H|6|0|8 H|8|0|2 H|9|0|2 H|10|0|3 H|11|0|3 H|12|0|4 H|93|0|2 H|88|0|2 H|82|0|4 H|4|0|1</Property>
+        </Properties>
+    </DCServer>
+
+    <!-- ================================================================================ -->
+    <DCServer name="icare">
+        <Description><![CDATA[
+            ICare
+            ]]></Description>
+        <UniqueIDPrefix><![CDATA[
+            icare_
+            imei_
+            *
+            ]]></UniqueIDPrefix>
+        <ListenPorts 
+            tcpPort="31260" 
+            udpPort="31260"
+            />
+        <Properties>
+        </Properties>
+    </DCServer>
+
+    <!-- ================================================================================ -->
+
+</DCServerConfig>
+
