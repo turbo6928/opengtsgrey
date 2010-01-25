@@ -28,7 +28,7 @@
 //  2008/03/12  Martin D. Flynn
 //     -Added DEVICE_CODE var for specifying the device type
 // ----------------------------------------------------------------------------
-package org.opengts.servers.template;
+package org.opengts.servers.testserver;
 
 import org.opengts.*;
 import org.opengts.db.*;

@@ -27,7 +27,7 @@
 //  2009/08/07  Martin D. Flynn
 //     -Updated to use DCServerConfig
 // ----------------------------------------------------------------------------
-package org.opengts.servers.template;
+package org.opengts.servers.testserver;
 
 import java.lang.*;
 import java.util.*;
