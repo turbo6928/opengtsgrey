@@ -13,10 +13,9 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="CATALINA_HOME" value="C:\WebDev\apache-tomcat-6.0.20"/>
-<mapEntry key="GTS_HOME" value="C:\Users\rubenh\Projects\Java\OpenGTSGrey"/>
-<mapEntry key="JAVA_HOME" value="C:\Program Files (x86)\Java\jdk1.6.0_18"/>
-<mapEntry key="ANT_HOME" value="C:\Program Files (x86)\eclipse\plugins\org.apache.ant_1.7.1.v20090120-1145"/>
+<mapEntry key="JAVA_HOME" value="W:\apps\jdk1.6.0_18"/>
+<mapEntry key="GTS_HOME" value="W:\dev\java\OpenGTSGrey"/>
+<mapEntry key="CATALINA_HOME" value="W:\apps\apache-tomcat-6.0.20"/>
 </mapAttribute>
 <booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
@@ -24,9 +23,9 @@
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_18"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.ant.internal.ui.antsupport.InternalAntRunner"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="OpenGTSGrey"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="C:\Users\rubenh\Projects\Java\OpenGTSGrey\build.xml"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="W:\dev\java\OpenGTSGrey\build.xml"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_RUN_BUILD_KINDS" value="full,incremental,auto,clean"/>
 <booleanAttribute key="org.eclipse.ui.externaltools.ATTR_TRIGGERS_CONFIGURED" value="true"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="C:\Users\rubenh\Projects\Java\OpenGTSGrey"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="W:\dev\java\OpenGTSGrey"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.ant.ui.remoteAntProcessFactory"/>
 </launchConfiguration>
