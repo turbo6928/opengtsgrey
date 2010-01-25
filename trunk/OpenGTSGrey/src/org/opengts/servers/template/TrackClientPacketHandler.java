@@ -72,7 +72,7 @@
 //     -Modified to describe how to return ACK packets back to the device.
 //     -Added parser for RTProperties String (format #3)
 // ----------------------------------------------------------------------------
-package org.opengts.servers.template;
+package org.opengts.servers.testserver;
 
 import java.lang.*;
 import java.util.*;

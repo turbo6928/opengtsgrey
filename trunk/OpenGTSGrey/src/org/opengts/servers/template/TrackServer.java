@@ -25,7 +25,7 @@
 //  2006/07/27  Martin D. Flynn
 //     -Moved constant information to 'Constants.java'
 // ----------------------------------------------------------------------------
-package org.opengts.servers.template;
+package org.opengts.servers.testserver;
 
 import java.lang.*;
 import java.util.*;
