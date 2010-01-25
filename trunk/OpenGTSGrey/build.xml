@@ -85,7 +85,7 @@ File   : build.xml
   </target>
 
   <!-- Target: compile.servers -->
-  <target name="compile.servers" depends="compile.base,gtsdmtp,icare,template" 
+  <target name="compile.servers" depends="compile.base,gtsdmtp,icare,template,testserver" 
     description="Build Servers">
     <echo message="Servers compiled ..."/>
   </target>
