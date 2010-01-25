@@ -1,6 +1,6 @@
 package org.opengts;
 public class CompileTime
 {
-    // 2010/01/24 15:08:27 CET
-    public static final long COMPILE_TIMESTAMP = 1264342107L;
+    // 2010/01/25 19:40:44 CET
+    public static final long COMPILE_TIMESTAMP = 1264444844L;
 }
