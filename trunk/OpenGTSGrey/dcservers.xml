@@ -58,8 +58,8 @@
             udpPort="31200"
             />
         <Properties>
-            <Property key="parseFormat">3</Property>
-            <Property key="minimumSpeedKPH">4.0</Property>
+            <Property key="parseFormat">1</Property>
+            <Property key="minimumSpeedKPH">0.0</Property>
             <Property key="estimateOdometer">true</Property>
             <Property key="simulateGeozones">true</Property>
             <Property key="simulateDigitalInputs">0xFF</Property>
