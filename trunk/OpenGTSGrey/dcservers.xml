@@ -114,20 +114,5 @@
         </Properties>
     </DCServer>
     
-    <!-- ================================================================================
- 	 ========================= Testserver01 Overrides ===================================== -->
-    
-    <DCServer name="testserver01">
-        <Description><![CDATA[Testserver Server]]></Description>
-        <ListenPorts tcpPort="31205" udpPort="31205" />
-        <Properties>
-            <Property key="parseFormat">1</Property>
-            <Property key="minimumSpeedKPH">5.0</Property>
-            <Property key="estimateOdometer">true</Property>
-            <Property key="simulateGeozones">false</Property>
-            <Property key="simulateDigitalInputs">0xFF</Property>
-        </Properties>
-    </DCServer>
-    
 </DCServerConfig>
 
