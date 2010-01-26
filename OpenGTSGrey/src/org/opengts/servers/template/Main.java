@@ -60,7 +60,7 @@ public class Main
     // ------------------------------------------------------------------------
     // ------------------------------------------------------------------------
     
-    private static String DEVICE_CODE = DCServerFactory.TEMPLATE_NAME;
+    private static String DEVICE_CODE = DCServerFactory.TESTSERVER_NAME;
 
     /* return server config */
     public static String getServerName()
