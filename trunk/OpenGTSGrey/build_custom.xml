@@ -53,44 +53,4 @@ File   : build_custom.xml
 
   </target>
 
-  <!-- ======================================================================== -->
-  <!-- ======================================================================== -->
-	
-	<!-- Target: Device Parser Module example testserver01 -->
-  <target name="testserver01" depends="prepare,gtsdb" 
-    description="Create 'Device Communication Server' testserver01 ...">
-    <echo message="testserver01 ..."/>
-
-    <!-- compile testserver01 -->
-    <javac srcdir="${src.gts}"
-        source="${compiler.source}"
-        target="${compiler.target}"
-        destdir="${build.home}"
-        debug="${compile.debug}"
-        nowarn="${compile.nowarn}"
-        deprecation="${compile.deprecation}"
-        optimize="${compile.optimize}">
-        <compilerarg compiler="${compiler.compiler}" value="${compile.Xlint}"/>
-        <classpath refid="compile.classpath"/>
-        <include name="org/opengts/servers/*.java"/>
-        <include name="org/opengts/servers/testserver01/**/*.java"/>
-    </javac>
-
-    <!-- create template.jar server -->
-    <jar jarfile="${build.lib}/testserver01.jar">
-        <manifest>
-            <attribute name="Class-Path" value="${Server_Jar_Classpath}"/>
-            <attribute name="Main-Class" value="org.opengts.servers.testserver01.Main"/>
-        </manifest>
-        <fileset dir="${build.home}">
-            <include name="org/opengts/servers/*.class"/>
-            <include name="org/opengts/servers/testserver01/**/*.class"/>
-        </fileset>
-    </jar>
-
-  </target>
-
-  <!-- ======================================================================== -->
-  <!-- ======================================================================== -->
-
 </project>
