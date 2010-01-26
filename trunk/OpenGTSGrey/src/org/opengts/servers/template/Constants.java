@@ -40,7 +40,7 @@ public class Constants
 
     /* title */
     // Displayed at server startup
-    public static final String  TITLE_NAME              = "Template Example Device Parsing Module";
+    public static final String  TITLE_NAME              = "Testserver Example Device Parsing Module";
     public static final String  VERSION                 = "0.2.3";
     public static final String  COPYRIGHT               = Version.getCopyright();
     
@@ -55,7 +55,7 @@ public class Constants
     //   If 'false', then "<TrackCLientPacketHandler>.getActualPacketLength(...)" *WILL*
     //   be called to allow the parser to determine the actual length of the client
     //   packet based on the first few bytes of the data packet (see 'MIN_PACKET_LENGTH').
-    public static final boolean ASCII_PACKETS           = false;
+    public static final boolean ASCII_PACKETS           = true;
     public static final int     ASCII_LINE_TERMINATOR[] = new int[] { '\r', '\n' };
 
     /* packet length */
