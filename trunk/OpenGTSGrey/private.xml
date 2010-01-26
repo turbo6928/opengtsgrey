@@ -175,8 +175,8 @@ Notes:
     userLogin="true"
     emailLogin="false"
     restricted="false"
-    demo="true" 
-    locale="en">
+    demo="false" 
+    locale="es">
  
     <!-- Default Base URL -->
     <!-- - ->
@@ -284,7 +284,7 @@ Notes:
         <Property key="topMenu.maximumIconsPerRow">-1</Property>                <!-- [#] (for 'menuType=icon') max icons per row -->
 
         <!-- TrackMap properties -->
-        <Property key="trackMap.fleetDeviceEventCount">1</Property>             <!-- [#] limit of points per device on "fleet" map -->
+        <Property key="trackMap.fleetDeviceEventCount">25</Property>             <!-- [#] limit of points per device on "fleet" map -->
         <Property key="trackMap.calendarAction">fade</Property>                 <!-- [fixed|fade|popup] calendar action -->
         <Property key="trackMap.calendarDateOnLoad">last</Property>             <!-- [last|current] set calendar date OnLoad -->
         <Property key="trackMap.showTimezoneSelection">true</Property>          <!-- [true|false] show timezone selection pulldown -->
@@ -306,7 +306,7 @@ Notes:
         <!-- ReportMenu properties -->
         <Property key="reportMenu.useMapDates">true</Property>                  <!-- [true|false] use 'Map' Calendar dates (else use private dates) -->
         <Property key="reportMenu.showTimezoneSelection">true</Property>        <!-- [true|false] show timezone selection pulldown -->
-        <Property key="reportMenu.enableReportEmail">false</Property>           <!-- [true|false] enable 'EMail' format option for reports -->
+        <Property key="reportMenu.enableReportEmail">true</Property>           <!-- [true|false] enable 'EMail' format option for reports -->
 
         <!-- ReportDisplay properties -->
         <Property key="reportDisplay.showGoogleKML">false</Property>            <!-- [true|false] show "KML" link (supported reports only) -->
@@ -406,12 +406,12 @@ Notes:
     <!-- =============================================
      === OpenLayers [http://www.openlayers.org] using OpenStreetMaps [http://www.openstreetmap.org]
      -->
-    <MapProvider name="openLayers" active="true"
+    <MapProvider name="openLayers" active="false"
         class="org.opengts.war.maps.jsmap.OpenLayers"
         rtPropPrefix="Domain.MapProvider.">
         <Property key="map.fillFrame">false</Property>                  <!-- expand map to fill page frame -->
-        <!-- <Property key="map.width">-1</Property> -->
-        <!-- <Property key="map.height">-1</Property> -->
+        <Property key="map.width">800</Property>
+        <Property key="map.height">600</Property>
         <Property key="info.showAltitude">true</Property>               <!-- show altitude in info balloon -->
         <Property key="jsmap.showMapLoading">true</Property>            <!-- show "Loading Map Points" when loading data -->
         <!-- <Property key="jsmap.showMapLoading.image">./images/MapLoading.gif</Property> -->
@@ -428,7 +428,7 @@ Notes:
         <Property key="zone.map.multipoint">false</Property>            <!-- [true|false] false==1 point, true=6 points -->
 
         <!-- include target geozones on map (a pushpin must be in the Geozone for it to be displayed) -->
-        <Property key="map.includeGeozones">false</Property>
+        <Property key="map.includeGeozones">true</Property>
 
         <!-- route line -->
         <Property key="map.routeLine">true</Property>                   <!-- include travel route line -->
@@ -441,8 +441,8 @@ Notes:
 
         <!-- enable auto-update -->
         <Property key="auto.enable">true</Property>
-        <Property key="auto.interval">20</Property>
-        <Property key="auto.count">10</Property>
+        <Property key="auto.interval">0.5</Property>
+        <Property key="auto.count">1000</Property>
 
         <!-- The "Pushpins" tag section allows overriding the default pushpins displayed on the map. -->
         <!-- (these icons were created using the "Marker Maker" tool at "http://www.gmaplive.com/marker_maker.php") -->
@@ -810,14 +810,14 @@ Notes:
      === Note: When using the Google Map mapping service, it is your responsibility 
      === to make sure you comply with all of the Google terms of use for this service.
      -->
-    <MapProvider name="googleMaps" active="false"
+    <MapProvider name="googleMaps" active="true"
         class="org.opengts.war.maps.jsmap.GoogleMaps"
-        key="*** PLACE AUTHORIZATION KEY HERE ***"
+        key="ABQIAAAAAU1C4WTqwE2nE4iTQKQvzhTwM0brOpm-All5BF6PoaKBxRWWERRrts0qr1KhvuRW-pmNuiaAiDrwQQ"
         rtPropPrefix="Domain.MapProvider.">
         <Property key="map.fillFrame">false</Property>
-        <!-- <Property key="map.width">680</Property>           -->     <!-- map width -->
-        <!-- <Property key="map.height">470</Property>          -->     <!-- map width -->
-        <Property key="scrollWheelZoom">false</Property>                <!-- enable/disable scroll wheel zoom -->
+        <!-- <Property key="map.width">800</Property>           -->     <!-- map width -->
+        <!-- <Property key="map.height">600</Property>          -->     <!-- map width -->
+        <Property key="scrollWheelZoom">true</Property>                <!-- enable/disable scroll wheel zoom -->
         <!-- <Property key="google.mapcontrol">http://maps.google.com/maps?file=api&v=2&sensor=true&key=...</Property> -->
         <!-- <Property key="google.sensor">true</Property> -->
 
@@ -827,26 +827,26 @@ Notes:
         <Property key="default.lon">-96.5000</Property>                 <!-- default longitude when no pushpins are displayed -->
 
         <!-- Geozone map size/config -->
-        <!-- <Property key="zone.map.width">630</Property> -->
-        <!-- <Property key="zone.map.height">540</Property> -->
+        <!-- <Property key="zone.map.width">800</Property> -->
+        <!-- <Property key="zone.map.height">600</Property> -->
         <Property key="zone.map.multipoint">false</Property>            <!-- [true|false] false==1 point, true=6 points -->
 
         <!-- include target geozones on map (a pushpin must be in the Geozone for it to be displayed) -->
-        <Property key="map.includeGeozones">false</Property>
+        <Property key="map.includeGeozones">true</Property>
 
         <!-- route line -->
         <Property key="map.routeLine">true</Property>                   <!-- include travel route line -->
         <Property key="map.routeLine.color">#FF2222</Property>          <!-- include travel route line color -->
-        <Property key="map.routeLine.arrows">false</Property>           <!-- include travel route line arrows (GoogleMaps only - always blue) -->
+        <Property key="map.routeLine.arrows">true</Property>           <!-- include travel route line arrows (GoogleMaps only - always blue) -->
 
         <!-- replay -->
         <Property key="replay.enable">true</Property>                   <!-- enable/disable replay -->
         <Property key="replay.interval">1500</Property>                 <!-- replay interval (in milliseconds) -->
 
         <!-- auto update -->
-        <Property key="auto.enable">false</Property>
-        <Property key="auto.interval">20</Property>
-        <Property key="auto.count">10</Property>
+        <Property key="auto.enable">true</Property>
+        <Property key="auto.interval">1</Property>
+        <Property key="auto.count">100</Property>
 
         <!-- The "Pushpins" tag section allows overriding the pushpins displayed on the map. -->
         <!-- These are the standard Google icons - ->
@@ -982,9 +982,9 @@ Notes:
      ===   to make sure you comply with all of the Google terms of use for this service.
      === - NOTE: Google has a limit of 15K reverse-geocodes in any 24-hour period.
      -->
-    <ReverseGeocodeProvider name="google" active="false"
+    <ReverseGeocodeProvider name="google" active="true"
         class="org.opengts.geocoder.google.GoogleGeocode"
-        key="*** PLACE AUTHORIZATION KEY HERE ***"
+        key="ABQIAAAAAU1C4WTqwE2nE4iTQKQvzhTwM0brOpm-All5BF6PoaKBxRWWERRrts0qr1KhvuRW-pmNuiaAiDrwQQ"
         rtPropPrefix="Domain.ReverseGeocodeProvider.">
         <Property key="sensor">true</Property>
     </ReverseGeocodeProvider>

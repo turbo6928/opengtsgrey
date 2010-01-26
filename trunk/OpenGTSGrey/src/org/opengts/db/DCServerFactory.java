@@ -91,6 +91,8 @@ public class DCServerFactory
     public static final String  BLUETREE_NAME                   = "bluetree";       // [30550]
     public static final String  STARSNAV_NAME                   = "starsnav";       // [30650]
     public static final String  TRIMTRAC_NAME                   = "trimtrac";       // [30680] Pro
+    public static final String  TESTSERVER_NAME                 = "testserver";     // [30700]
+    public static final String  TESTSERVER01_NAME               = "testserver01";   // [30710]
 
     
     public static final String  OPENDMTP_NAME                   = "gtsdmtp";        // [31000] OpenDMTP
