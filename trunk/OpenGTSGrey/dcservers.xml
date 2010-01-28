@@ -106,11 +106,13 @@
         <Description><![CDATA[Testserver Server]]></Description>
         <ListenPorts tcpPort="31200" udpPort="31200" />
         <Properties>
+        	<!--
             <Property key="parseFormat">1</Property>
             <Property key="minimumSpeedKPH">5.0</Property>
             <Property key="estimateOdometer">true</Property>
             <Property key="simulateGeozones">false</Property>
             <Property key="simulateDigitalInputs">0xFF</Property>
+            -->
         </Properties>
     </DCServer>
     
