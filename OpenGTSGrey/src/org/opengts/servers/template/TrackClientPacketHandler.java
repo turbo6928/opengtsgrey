@@ -128,14 +128,14 @@ public class TrackClientPacketHandler
     //    interval between generated "in-motion" events, and how straight or curved the
     //    road is.  Typically, a GPS-based odometer tends to under-estimate the actual
     //    vehicle value.
-    public  static       boolean ESTIMATE_ODOMETER          = false;
+    public  static       boolean ESTIMATE_ODOMETER          = true;
     
     /* simulate geozone arrival/departure */
     // (enable to insert simulated Geozone arrival/departure EventData records)
-    public  static       boolean SIMEVENT_GEOZONES          = false;
+    public  static       boolean SIMEVENT_GEOZONES          = true;
     
     /* simulate digital input changes */
-    public  static       long    SIMEVENT_DIGITAL_INPUTS    = 0x0000L; // 0xFFFFL;
+    public  static       long    SIMEVENT_DIGITAL_INPUTS    = 0xFFFFL; // 0xFFFFL - 0x0000L;
 
     /* flag indicating whether data should be inserted into the DB */
     // should be set to 'true' for production.
@@ -148,7 +148,7 @@ public class TrackClientPacketHandler
     
     /* minimum acceptable speed value */
     // Speeds below this value should be considered 'stopped'
-    public  static       double  MINIMUM_SPEED_KPH      = 0.0;
+    public  static       double  MINIMUM_SPEED_KPH      = 0.4;
 
     // ------------------------------------------------------------------------
 
