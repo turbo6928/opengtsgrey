@@ -492,7 +492,7 @@ public class TrackClientPacketHandler
         /* insert/return */
         if (this.parseInsertRecord_Common(gpsEvent)) {
             // change this to return any required acknowledgement (ACK) packets back to the device
-            return null;
+            return "ASCII Packet Received";
         } else {
             return null;
         }
