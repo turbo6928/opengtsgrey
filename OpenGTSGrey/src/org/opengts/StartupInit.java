@@ -120,7 +120,7 @@ public class StartupInit
         // See "RuleFactoryExample.java" for more information
         if (!Device.hasRuleFactory()) {
             // To add the RuleFactoryExample module:
-            //   Device.setRuleFactory(new RuleFactoryExample());
+            Device.setRuleFactory(new RuleFactoryExample());
             // To add a different customized RuleFactory implementation:
             //   Device.setRuleFactory(new org.opengts.extra.rule.RuleFactoryLite());
             RuleFactory rf = this._getRuleFactoryInstance();

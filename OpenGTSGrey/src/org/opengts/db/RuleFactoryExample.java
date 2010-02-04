@@ -82,7 +82,7 @@ public class RuleFactoryExample
     // ------------------------------------------------------------------------
 
     /* debug testing */
-    private static boolean SEND_NOTIFICATION = false; // set to 'true' for production
+    private static boolean SEND_NOTIFICATION = true; // set to 'true' for production
     public static void DebugSetSendNotification(boolean send)
     {
         SEND_NOTIFICATION = send;
@@ -108,10 +108,12 @@ public class RuleFactoryExample
     private static String SEL_IS_STOPPED        = "isStopped";
     private static String SEL_OVER_100_KPH      = "over100kph";
     private static String SEL_OVER_SPEED        = "overSpeed";
+    private static String SEL_GEOZONE_EVENT     = "geozone";
     private static String RULE_FUNCTIONS[] = new String[] {
         SEL_IS_STOPPED,
         SEL_OVER_100_KPH,
-        SEL_OVER_SPEED
+        SEL_OVER_SPEED,
+        SEL_GEOZONE_EVENT
     };
     
     private static char   ARG_SEPARATOR_CHAR    = '(';
@@ -176,7 +178,21 @@ public class RuleFactoryExample
                 return "True if Event speed is over specified limit";
             }
         });
-
+        /* vehicle arrives or departs geozone */
+        this.ftnMap.put(SEL_GEOZONE_EVENT, new RuleFunction() {
+            public Object evaluate(EventData ev, String arg) {
+                
+            	return new Boolean(ev.getStatusCode() == StatusCodes.STATUS_GEOFENCE_ARRIVE ||
+                		ev.getStatusCode() == StatusCodes.STATUS_GEOFENCE_DEPART);
+                
+            }
+            public String usage() {
+                return SEL_GEOZONE_EVENT;
+            }
+            public String description() {
+                return "True if vehicle arrives or departs a GeoZone";
+            }
+        });
     }
 
     // ------------------------------------------------------------------------
@@ -387,7 +403,7 @@ public class RuleFactoryExample
             Print.logInfo("Selector matched: " + selector);
             int actionMask = RuleFactory.ACTION_DEFAULT;
             // perform appropriate action, such as sending email
-            // RuleFactoryExample._sendNotification(event, RuleFactory.ACTION_DEFAULT);
+            RuleFactoryExample._sendNotification(event, RuleFactory.ACTION_DEFAULT);
             return actionMask;
         } else {
             Print.logDebug("Selector match returned false: " + selector);
@@ -497,6 +513,10 @@ public class RuleFactoryExample
             "Location  : " + evdb.getGeoPoint() + "\n" +
             "Speed     : " + evdb.getSpeedKPH() + " KPH  " + evdb.getHeading() + "\n" +
             "Address   : " + evdb.getAddress() + "\n" +
+            "GeoZoneIndex   : " + evdb.getGeozoneIndex() + "\n" +
+            "GeoZoneID   : " + evdb.getGeozoneID() + "\n" +
+            "GeoZoneDescription   : " + evdb.getGeozoneDescription() + "\n" +
+            "StatusCodeDescription   : " + evdb.getStatusCodeDescription(privLabel)+ "\n" +
             "\n";
 
         /* debug logging */
