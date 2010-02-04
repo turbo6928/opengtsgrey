@@ -968,7 +968,7 @@ Notes:
          === Locally hosted Geonames Commercial reverse-geocoding service using NavTeq:
          -->
         <Property key="host">localhost:8080</Property>
-        <Property key="postalFailover">false</Property>
+        <Property key="postalFailover">false</Property>	
         <Property key="service.findNearestAddress">geonames/findAddress</Property>
         <Property key="failoverHost"></Property>
         <Property key="username">geonames</Property>
@@ -982,7 +982,7 @@ Notes:
      ===   to make sure you comply with all of the Google terms of use for this service.
      === - NOTE: Google has a limit of 15K reverse-geocodes in any 24-hour period.
      -->
-    <ReverseGeocodeProvider name="google" active="true"
+    <ReverseGeocodeProvider name="google" active="trued"
         class="org.opengts.geocoder.google.GoogleGeocode"
         key="ABQIAAAAAU1C4WTqwE2nE4iTQKQvzhTwM0brOpm-All5BF6PoaKBxRWWERRrts0qr1KhvuRW-pmNuiaAiDrwQQ"
         rtPropPrefix="Domain.ReverseGeocodeProvider.">
