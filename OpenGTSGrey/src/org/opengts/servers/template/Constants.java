@@ -41,7 +41,7 @@ public class Constants
     /* title */
     // Displayed at server startup
     public static final String  TITLE_NAME              = "Testserver Example Device Parsing Module";
-    public static final String  VERSION                 = "0.2.3";
+    public static final String  VERSION                 = "0.2.5";
     public static final String  COPYRIGHT               = Version.getCopyright();
     
     // ------------------------------------------------------------------------
