@@ -1,0 +1,14 @@
+
+/* Login page */
+.accountLoginTable { 
+    margin-top: 50px;
+    width: 350px;
+    text-align: center;
+}
+
+.accountLoginCell { 
+    padding: 10px; 
+    border: solid #555555 1px; 
+    background-color: #FBFBFB; 
+    text-align: center;
+}

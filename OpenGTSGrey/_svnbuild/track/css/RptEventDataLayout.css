@@ -1,0 +1,202 @@
+
+TD#deviceId        { 
+    text-align: left; 
+}
+TD#deviceDesc      { 
+    text-align: left; 
+}
+
+TD#groupId         { 
+    text-align: left; 
+}
+
+TD#entityId        { 
+    font-family: monospace; 
+    padding-top: 2px; 
+    text-align: right; 
+}
+TD#entityDesc      { 
+    text-align: left; 
+}
+
+TD#driverId        { 
+    font-family: monospace; 
+    padding-top: 2px; 
+    text-align: left; 
+}
+TD#driverDesc      { 
+    text-align: left; 
+}
+TD#driverMessage   { 
+    text-align: left; 
+}
+
+TD#date            { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+TD#time            { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+TD#dateTime        { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+TD#timestamp       { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+
+TD#createDate      { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+TD#createTime      { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+TD#createDateTime  { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+TD#createTimestamp { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+
+TD#gpsAge          { 
+    font-family: monospace; 
+    padding-top: 2px; 
+    text-align: right; 
+}
+TD#geoPoint        { 
+    font-family: monospace; 
+    padding-top: 2px; 
+}
+TD#latitude        { 
+    font-family: monospace; 
+    padding-top: 2px; 
+    text-align: right; 
+}
+TD#longitude       { 
+    font-family: monospace; 
+    padding-top: 2px; 
+    text-align: right; 
+}
+
+TD#speedLimit      { 
+    font-family: monospace; 
+    padding-top: 2px; 
+    text-align: right; 
+}
+TD#speed           { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#speedh          { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#speedu          { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+
+TD#altitude        { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+
+TD#satellites      { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+
+TD#odometer        { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+
+TD#geozoneId        { 
+    font-family: monospace; 
+    padding-top: 2px; 
+    text-align: left; 
+}
+TD#geozoneDesc      { 
+    text-align: left; 
+}
+
+TD#address         { 
+    text-align: left; 
+    width: 200px;
+}
+
+TD#thermo1         { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#thermo2         { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#thermo3         { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#thermo4         { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+
+TD#fuelLevel       { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#fuelEconomy     { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#fuelTotal       { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+TD#fuelIdle        { 
+    font-family: monospace;
+    padding-top: 2px; 
+    text-align: right;
+}
+
+TD#checkinDateTime { 
+    font-family: monospace;
+    padding-top: 2px;
+}
+TD#checkinAge      { 
+    font-family: monospace;
+    padding-top: 2px;
+    text-align: right;
+}
+
+TD#jobNumber  {
+    font-family: monospace;
+    padding-top: 2px;
+    text-align: center;
+}
+
+/* Custom Attributes */
+TD#customField  {
+    text-align: center;
+}

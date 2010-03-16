@@ -1,0 +1,105 @@
+
+/* icon menu */
+#iconMenu { 
+    font: normal 9pt sans-serif; 
+    text-align: left;
+}
+
+#iconMenu .iconMenuTable {
+}
+
+#iconMenu TR.menuGroupTitle { 
+    font: normal 9pt sans-serif; 
+    text-align: left;
+}
+
+#iconMenu TD.menuGroupTitle { 
+    font: normal 12pt sans-serif; 
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+}
+
+#iconMenu TR.menuGroupIcons { 
+    font: normal 9pt sans-serif; 
+    text-align: left;
+}
+
+#iconMenu TD.menuGroupIcons { 
+    font: normal 9pt sans-serif; 
+    text-align: left;
+}
+
+/* ---------------------------------------------- */
+
+#iconMenu TD.menuItemImage_on {
+    text-align: center;
+    vertical-align: top;
+    width: 102px;
+    height: 140px;
+    /* background-image: url('../images/sib/MenuIcon_ON.png'); */
+    cursor: pointer;
+}
+
+#iconMenu TD.menuItemImage_off {
+    text-align: center;
+    vertical-align: top;
+    width: 102px;
+    height: 140px;
+    /* background-image: url('../images/sib/MenuIcon_OFF.png'); */
+    cursor: pointer;
+}
+
+#iconMenu IMG.menuItemImage {
+    width: 102px;
+    height: 140px;
+}
+
+/* ---------------------------------------------- */
+
+#iconMenu TD.menuItemText_on {
+    padding-top: 25px; 
+    text-align: center;
+    vertical-align: top;
+    width: 102px;
+    height: 140px;
+    background-image: url('../images/sib/MenuIcon_ON.png');
+    cursor: pointer;
+}
+
+#iconMenu TD.menuItemText_off {
+    padding-top: 25px; 
+    text-align: center;
+    vertical-align: top;
+    width: 102px;
+    height: 140px;
+    background-image: url('../images/sib/MenuIcon_OFF.png');
+    cursor: pointer;
+}
+
+#iconMenu SPAN.menuItemText  { 
+    text-decoration: none;
+    color: white;
+    font: bold 9pt sans-serif; 
+    text-shadow: #666666 5px 5px 5px;
+}
+
+/* ---------------------------------------------- */
+
+#iconMenu P.shadowText  { 
+    position: relative; 
+    display: block; 
+    color: #FFFFFF; 
+}
+#iconMenu P.shadowText span { 
+    position: absolute; 
+    display: block; 
+    top: 0px;
+}
+#iconMenu P.shadowText:before { 
+    display: block; 
+    padding: 2px 0px 0px 3px; 
+    content: attr(title); 
+    color:#333333;
+} 
+
