@@ -260,8 +260,8 @@ Notes:
     <Properties rtPropPrefix="Domain.Properties.">
 
         <!-- Show "Powered by OpenGTS" on HTML header -->
-        <Property key="login.showPoweredByOpenGTS">true</Property>
-        <!-- -->
+        <Property key="login.showPoweredByOpenGTS">false</Property>
+        
 
         <!-- Override HTMLTools "http.userAgent" (see RTKey.HTTP_USER_AGENT) -->
         <Property key="http.userAgent">GTS/${%version} [${session.locale=EN}] ${session.name=}</Property>
@@ -284,9 +284,9 @@ Notes:
         <Property key="topMenu.maximumIconsPerRow">-1</Property>                <!-- [#] (for 'menuType=icon') max icons per row -->
 
         <!-- TrackMap properties -->
-        <Property key="trackMap.fleetDeviceEventCount">25</Property>             <!-- [#] limit of points per device on "fleet" map -->
+        <Property key="trackMap.fleetDeviceEventCount">5</Property>             <!-- [#] limit of points per device on "fleet" map -->
         <Property key="trackMap.calendarAction">fade</Property>                 <!-- [fixed|fade|popup] calendar action -->
-        <Property key="trackMap.calendarDateOnLoad">last</Property>             <!-- [last|current] set calendar date OnLoad -->
+        <Property key="trackMap.calendarDateOnLoad">current</Property>             <!-- [last|current] set calendar date OnLoad -->
         <Property key="trackMap.showTimezoneSelection">true</Property>          <!-- [true|false] show timezone selection pulldown -->
         <Property key="trackMap.showCursorLocation">true</Property>             <!-- [true|false] show cursor location lat/lon -->
         <Property key="trackMap.showDistanceRuler">true</Property>              <!-- [true|false] show distance ruler (if supported by map) -->
@@ -296,7 +296,7 @@ Notes:
         <Property key="trackMap.detailAscending">true</Property>                <!-- [true|false] sort detail events in ascending/descending order -->
         <Property key="trackMap.showUpdateLast">false</Property>                <!-- [true|false] show Update "Last" location button -->
         <Property key="trackMap.mapControlLocation">right</Property>            <!-- [right|left] show controls to the left|right of the map -->
-        <Property key="trackMap.showLocateNow">false</Property>                 <!-- [true|false] show "Locate Now" button -->
+        <Property key="trackMap.showLocateNow">true</Property>                 <!-- [true|false] show "Locate Now" button -->
         <Property key="trackMap.showGoogleKML">false</Property>                 <!-- [true|false|last] show "Google KML" link -->
         <Property key="trackMap.limitType">last</Property>                      <!-- [first|last] overflow limit type -->
 
@@ -316,9 +316,9 @@ Notes:
         <Property key="deviceInfo.showNotificationFields">default</Property>    <!-- [true|false|default] show notification fields -->
         <Property key="deviceInfo.showPropertiesButton">false</Property>        <!-- [true|false] show "Properties" button -->
         <Property key="deviceInfo.showFixedLocation">false</Property>           <!-- [true|false] show Device 'fixed' location (required fixe loc fields) -->
-        <Property key="deviceInfo.showNotes">false</Property>                   <!-- [true|false] show "Notes" field -->
+        <Property key="deviceInfo.showNotes">true</Property>                   <!-- [true|false] show "Notes" field -->
         <Property key="deviceInfo.showExpectedAcks">false</Property>            <!-- [true|false] show "Expect Ack" column -->
-        <Property key="deviceInfo.showPushpinChooser">false</Property>          <!-- [true|false] show Pushpin Chooser -->
+        <Property key="deviceInfo.showPushpinChooser">true</Property>          <!-- [true|false] show Pushpin Chooser -->
 
         <!-- GroupInfo properties -->
         <Property key="groupInfo.validateNewIDs">true</Property>                <!-- [true|false] Validate new Group IDs -->
@@ -332,13 +332,13 @@ Notes:
         <!-- ZoneInfo properties -->
         <Property key="zoneInfo.validateNewIDs">true</Property>                 <!-- [true|false] Validate new Zone IDs -->
         <Property key="zoneInfo.mapControlLocation">right</Property>            <!-- [right|left] show controls to the left|right of the map -->
-        <Property key="zoneInfo.enableZipcodeGeocode">false</Property>          <!-- [true|false] (Experimental) show "Center on ZipCode" -->
+        <Property key="zoneInfo.enableZipcodeGeocode">true</Property>          <!-- [true|false] (Experimental) show "Center on ZipCode" -->
 
         <!-- DeviceChooser properties -->
-        <Property key="deviceChooser.sortBy">description</Property>             <!-- [id|name|description] sort by -->
+        <Property key="deviceChooser.sortBy">id</Property>			            <!-- [id|name|description] sort by -->
         <Property key="deviceChooser.useTable">true</Property>                  <!-- [true|false] use DeviceChooser table selection -->
         <Property key="deviceChooser.idPosition">last</Property>                <!-- [none|first|last] ID column position -->
-        <Property key="deviceChooser.search">false</Property>                   <!-- [true|false] enable description search -->
+        <Property key="deviceChooser.search">true</Property>                   <!-- [true|false] enable description search -->
         <Property key="deviceChooser.singleItemTextField">false</Property>      <!-- [true|false] text field for single selections (non-table only) -->
 
         <!-- Calendar properties -->
@@ -815,20 +815,20 @@ Notes:
         key="ABQIAAAAAU1C4WTqwE2nE4iTQKQvzhTwM0brOpm-All5BF6PoaKBxRWWERRrts0qr1KhvuRW-pmNuiaAiDrwQQ"
         rtPropPrefix="Domain.MapProvider.">
         <Property key="map.fillFrame">false</Property>
-        <!-- <Property key="map.width">800</Property>           -->     <!-- map width -->
-        <!-- <Property key="map.height">600</Property>          -->     <!-- map width -->
+        <Property key="map.width">800</Property>           			     <!-- map width -->
+        <Property key="map.height">600</Property>          	     		<!-- map width -->
         <Property key="scrollWheelZoom">true</Property>                <!-- enable/disable scroll wheel zoom -->
         <!-- <Property key="google.mapcontrol">http://maps.google.com/maps?file=api&v=2&sensor=true&key=...</Property> -->
         <!-- <Property key="google.sensor">true</Property> -->
 
         <!-- default zoom/location -->
         <Property key="default.zoom">4</Property>                       <!-- default zoom when no pushpins are displayed -->
-        <Property key="default.lat">39.0000</Property>                  <!-- default latitude when no pushpins are displayed -->
-        <Property key="default.lon">-96.5000</Property>                 <!-- default longitude when no pushpins are displayed -->
+        <Property key="default.lat">41.0000</Property>                  <!-- default latitude when no pushpins are displayed -->
+        <Property key="default.lon">2.5000</Property>                	<!-- default longitude when no pushpins are displayed -->
 
         <!-- Geozone map size/config -->
-        <!-- <Property key="zone.map.width">800</Property> -->
-        <!-- <Property key="zone.map.height">600</Property> -->
+        <Property key="zone.map.width">800</Property>
+        <Property key="zone.map.height">600</Property>
         <Property key="zone.map.multipoint">false</Property>            <!-- [true|false] false==1 point, true=6 points -->
 
         <!-- include target geozones on map (a pushpin must be in the Geozone for it to be displayed) -->
@@ -837,7 +837,7 @@ Notes:
         <!-- route line -->
         <Property key="map.routeLine">true</Property>                   <!-- include travel route line -->
         <Property key="map.routeLine.color">#FF2222</Property>          <!-- include travel route line color -->
-        <Property key="map.routeLine.arrows">true</Property>           <!-- include travel route line arrows (GoogleMaps only - always blue) -->
+        <Property key="map.routeLine.arrows">false</Property>           <!-- include travel route line arrows (GoogleMaps only - always blue) -->
 
         <!-- replay -->
         <Property key="replay.enable">true</Property>                   <!-- enable/disable replay -->
@@ -845,8 +845,8 @@ Notes:
 
         <!-- auto update -->
         <Property key="auto.enable">true</Property>
-        <Property key="auto.interval">1</Property>
-        <Property key="auto.count">100</Property>
+        <Property key="auto.interval">10</Property>
+        <Property key="auto.count">50</Property>
 
         <!-- The "Pushpins" tag section allows overriding the pushpins displayed on the map. -->
         <!-- These are the standard Google icons - ->
@@ -982,7 +982,7 @@ Notes:
      ===   to make sure you comply with all of the Google terms of use for this service.
      === - NOTE: Google has a limit of 15K reverse-geocodes in any 24-hour period.
      -->
-    <ReverseGeocodeProvider name="google" active="trued"
+    <ReverseGeocodeProvider name="google" active="true"
         class="org.opengts.geocoder.google.GoogleGeocode"
         key="ABQIAAAAAU1C4WTqwE2nE4iTQKQvzhTwM0brOpm-All5BF6PoaKBxRWWERRrts0qr1KhvuRW-pmNuiaAiDrwQQ"
         rtPropPrefix="Domain.ReverseGeocodeProvider.">
@@ -1080,7 +1080,7 @@ Notes:
     <WebPages jsp="default" cssDir="/css">
         <!-- NewAccount: Uncomment to enable "New Account" button on login page - ->
         <Page class="org.opengts.war.track.page.NewAccount">
-            </Page>
+        	</Page>
         <!- - -->
         <Page class="org.opengts.war.track.page.ForgotPassword">
             </Page>
