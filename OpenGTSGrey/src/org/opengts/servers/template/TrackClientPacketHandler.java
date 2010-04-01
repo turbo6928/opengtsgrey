@@ -90,7 +90,7 @@ import org.opengts.servers.*;
 public class TrackClientPacketHandler
     extends AbstractClientPacketHandler
 {
-   
+    // 
     // ------------------------------------------------------------------------
     // This data parsing template contains *examples* of 2 different ASCII data formats:
     //
@@ -432,6 +432,21 @@ public class TrackClientPacketHandler
         // format coming from your chosen device and may need some significant changes to support
         // the format provided by your device (assuming that the format is even ASCII).
         
+    	// XT65 Input
+    	//		1				2		 3		   4	  5		6		7  8	9	   10	11				
+    	//353815011174699, 1980/01/06,00:00:12,90.0000000,N,000.0000000,W,500,000.00,000.00,0
+		//	0 - <IMEI>
+    	//	1 - <Date>
+    	//	2 - <Time>
+    	//  3 - <GpsLatitude>
+    	//  4 - <N-S-Indicator>
+    	//  5 - <GpsLongitude>
+    	//  6 - <E-W-Indicator>
+    	//  7 - <GpsAltitude>
+    	//  8 - <GpsSpeed>
+    	//  9 - <GpsCourse>
+    	// 10 - <GpsStatus>
+    	
         // This parsing method assumes the data format appears as follows:
         //      0             1        2       3         4       5     6  
         // <IMEI number>,2006/09/05,07:47:26,35.3640,-141.2958,27.0,224.8
@@ -462,10 +477,10 @@ public class TrackClientPacketHandler
         long     fixtime    = this._parseDate(fld[1],fld[2]);
         int      statusCode = StatusCodes.STATUS_LOCATION;
         double   latitude   = StringTools.parseDouble(fld[3],0.0);
-        double   longitude  = StringTools.parseDouble(fld[4],0.0);
-        double   speedKPH   = StringTools.parseDouble(fld[5],0.0);
-        double   heading    = StringTools.parseDouble(fld[6],0.0);
-        double   altitudeM  = 0.0;  // 
+        double   longitude  = StringTools.parseDouble(fld[5],0.0);
+        double   speedKPH   = StringTools.parseDouble(fld[8],0.0);
+        double   heading    = StringTools.parseDouble(fld[9],0.0);
+        double   altitudeM  = StringTools.parseDouble(fld[7],0.0);
         
         /* no modemID? */
         if (StringTools.isBlank(modemID)) {
@@ -492,7 +507,7 @@ public class TrackClientPacketHandler
         /* insert/return */
         if (this.parseInsertRecord_Common(gpsEvent)) {
             // change this to return any required acknowledgement (ACK) packets back to the device
-            return null;
+            return "ASCII Packet Received";
         } else {
             return null;
         }
